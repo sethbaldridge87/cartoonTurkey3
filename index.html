@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<body>
+<div id="cartoon">
+	<div id="turkey">
+		<div id="head">
+			<div id="right_eye" class="eye">
+				<div class="pupil"></div>
+			</div>
+			<div id="left_eye" class="eye">
+				<div class="pupil"></div>
+			</div>
+			<div id="beak"></div>
+			<div id="gobbler"></div>
+		</div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div class="feather"><div class="feather_line"></div></div>
+		<div id="body"></div>
+		<div id="right_thigh" class="thighs"></div>
+		<div id="left_thigh" class="thighs"></div>
+		<div id="right_shin" class="shins"></div>
+		<div id="left_shin" class="shins"></div>
+	</div>
+	<div id="right_foot" class="feet"></div>
+	<div id="left_foot" class="feet"></div>
+</div>
+<style>
+	#cartoon {
+		position: relative;
+		transform: scale(.5);
+	}
+	#turkey {
+		position: absolute;
+		left: 370px;
+		top: 360px;
+	}
+	#head {
+		position: absolute;
+		height: 350px;
+		width: 350px;
+		z-index: 1;
+		border: 3px solid black;
+		background-color:#732000;
+		border-radius: 50%;
+		box-shadow:inset -55px 0 4px 5px #4E1D01;
+		animation-name: pecking;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@keyframes pecking {
+		0%   {top: 0; left: 0;}
+		5%   {top: 0; left: 0;}
+		10%  {top: 0; left: 90px;}
+		20%  {top: 0; left: 90px;}
+		25%  {top: 0; left: 0px;}
+		35%  {top: 0; left: 0px;}
+		40%  {top: 400px;}
+		50%  {top: 400px;}
+		52.5%  {top: 420px;}
+		55%  {top: 400px;}
+		60%  {top: 400px;}
+		62.5%  {top: 420px;}
+		65%  {top: 400px;}
+		70%  {top: 400px;}
+		72.5%  {top: 420px;}
+		75%  {top: 400px;}
+		95%  {top: 400px;}
+		100% {top: 0;}
+	}
+	.eye {
+		position: absolute;
+		height: 90px;
+		width: 90px;
+		z-index: 1;
+		border: 3px solid black;
+		border-radius: 50%;
+		background-color: #fff;
+		top: 80px;
+	}
+	#left_eye {
+		left: 70px;
+	}
+	#right_eye {
+		left: 180px;
+	}
+	.pupil {
+		height: 25px;
+		width: 25px;
+		background-color: #000;
+		border-radius: 50%;
+		margin-top: 30px;
+		margin-left: 30px;
+		animation-name: eyeShift;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+	}
+	@keyframes eyeShift {
+		0%   {margin-top: 30px; margin-left: 30px;}
+		5%   {margin-top: 30px; margin-left: 30px;}
+		10%  {margin-top: 30px; margin-left: 60px;}
+		20%  {margin-top: 30px; margin-left: 60px;}
+		25%  {margin-top: 30px; margin-left: 30px;}
+		27.5%  {margin-top: 60px; margin-left: 30px;}
+		40%  {margin-top: 60px; margin-left: 30px;}
+		50%  {margin-top: 60px; margin-left: 30px;}
+		55%  {margin-top: 60px; margin-left: 30px;}
+		60%  {margin-top: 60px; margin-left: 30px;}
+		65%  {margin-top: 60px; margin-left: 30px;}
+		70%  {margin-top: 60px; margin-left: 30px;}
+		75%  {margin-top: 60px; margin-left: 30px;}
+		95%  {margin-top: 60px; margin-left: 30px;}
+		100%  {margin-top: 30px; margin-left: 30px;}
+	}
+	#beak {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-top: 160px solid orange;
+		border-radius: 50%;
+		z-index: 3;
+		top: 170px;
+		left: 125px;
+	}
+	#gobbler {
+		position: absolute;
+		height: 100px;
+		width: 60px;
+		background-color: red;
+		border-radius: 0 100% 50% 80%;
+		top: 200px;
+		left: 210px;
+		transform: rotate(-15deg);
+	}
+	.feather {
+		position: absolute;
+		width: 600px;
+		height: 70px;
+		border: 3px solid black;
+		background-color: orange;
+		background-image: linear-gradient(to right, yellow, red, brown);
+		border-radius: 500% 200% 200% 500%;
+		z-index: -5
+	}
+	.feather:nth-of-type(2) {
+		transform: rotate(-15deg);
+		left: -350px;
+		top: 500px;
+	}
+	.feather:nth-of-type(3) {
+		transform: rotate(-5deg);
+		left: -370px;
+    	top: 410px;
+	}
+	.feather:nth-of-type(4) {
+		transform: rotate(5deg);
+		left: -370px;
+    	top: 320px;
+	}
+	.feather:nth-of-type(5) {
+		transform: rotate(15deg);
+		left: -370px;
+    	top: 230px;
+	}
+	.feather:nth-of-type(6) {
+		transform: rotate(30deg);
+		left: -340px;
+   		top: 135px;
+	}
+	.feather:nth-of-type(7) {
+		transform: rotate(45deg);
+		left: -268px;
+    	top: 85px;
+	}
+	.feather:nth-of-type(8) {
+		transform: rotate(70deg);
+		left: -195px;
+    	top: 35px;
+	}
+	.feather:nth-of-type(9) {
+		transform: rotate(85deg);
+		left: -125px;
+    	top: 15px;
+	}
+	.feather:nth-of-type(10) {
+		transform: rotate(100deg);
+		left: -40px;
+    	top: 0px;
+	}
+	.feather:nth-of-type(11) {
+		transform: rotate(115deg);
+		left: 50px;
+    	top: 35px;
+	}
+	.feather:nth-of-type(12) {
+		transform: rotate(135deg);
+		left: 170px;
+    	top: 45px;
+	}
+	.feather:nth-of-type(13) {
+		transform: rotate(150deg);
+		left: 290px;
+    	top: 95px;
+	}
+	.feather:nth-of-type(14) {
+		transform: rotate(165deg);
+		left: 370px;
+    	top: 195px;
+	}
+	.feather:nth-of-type(15) {
+		transform: rotate(170deg);
+		left: 370px;
+    	top: 290px;
+	}
+	.feather:nth-of-type(16) {
+		transform: rotate(185deg);
+		left: 370px;
+    	top: 410px;
+	}
+	.feather:nth-of-type(17) {
+		transform: rotate(195deg);
+		left: 350px;
+		top: 510px;
+	}
+	.feather_line {
+		top: 32px;
+		position: absolute;
+		width: 530px;
+		left: 120px;
+		z-index: 10;
+		border: 3px solid black;
+		background-color: black;
+		border-radius: 50%;
+	}
+	#body {
+		position: absolute;
+		top: 100px;
+		height: 500px;
+		width: 500px;
+		border: 3px solid black;
+		background-color:#732000;
+		border-radius: 50%;
+		box-shadow:inset -55px 0 4px 5px #4E1D01;
+	}
+	.thighs {
+		position:absolute;
+		height: 200px;
+		width: 40px;
+		background-color: tan;
+		z-index: -1;
+		border-bottom-left-radius: 20px;
+    	border-bottom-right-radius: 20px;
+	}
+	#right_thigh {
+		top: 490px;
+		left: 435px;
+		transform: rotate(-45deg);
+	}
+	#left_thigh {
+		top: 490px;
+		left: 35px;
+		transform: rotate(45deg);
+	}
+	.shins {
+		position:absolute;
+		height: 200px;
+		width: 40px;
+		background-color: tan;
+		z-index: -2;
+		border-bottom-left-radius: 20px;
+    	border-bottom-right-radius: 20px;
+		border-top-left-radius: 20px;
+    	border-top-right-radius: 20px;
+	}
+	#right_shin {
+		top: 600px;
+		left: 430px;
+		transform: rotate(50deg);
+	}
+	#left_shin {
+		top: 600px;
+		left: 40px;
+		transform: rotate(-50deg);
+	}
+	.feet {
+		position:absolute;
+		top: 1040px;
+		height: 150px;
+		width: 40px;
+		background-color: tan;
+		z-index: -2;
+		border-bottom-left-radius: 20px;
+    	border-bottom-right-radius: 20px;
+		border-top-left-radius: 20px;
+    	border-top-right-radius: 20px;
+		transform: rotate(90deg);
+	}
+	#right_foot {
+		left: 790px;
+	}
+	#left_foot {
+		left: 415px;
+	}
+</style>
+</body>
+</html>
